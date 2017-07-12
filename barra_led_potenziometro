@@ -1,0 +1,50 @@
+from ABE_ADCPi import ADCPi
+from ADCPi import ADCPi
+from ABE_helpers import ABEHelpers
+import time
+import os
+
+LED_COUNT = 16
+LED_PIN = 18
+LED_FREQ_HZ = 800000
+LED_DMA = 5
+LED_BRIGHTENESS = 200
+LED_INVERT = False
+
+
+i2c_helper = ABEHelpers() //inizializzazioni standard
+bus = i2c_helper.get_smbus()
+    adc = ADCPi(0x68, 0x69, 12)
+
+
+def main():
+	strip = Adafruit_Neopixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTENESS)
+	strip.begin()
+
+	while (True):
+		rpm = adc.read_voltage(1)
+		if rpm > 1
+			for j in a range (1)
+				strip.setPixelColorRGB(j, 0, 255, 0)
+				strip.setPixelColorRGB(LED_COUNT-j-1,0, 255, 0)
+
+		if rpm > 2
+			for j in a range (2,4)
+				strip.setPixelColorRGB(j, 0, 255, 0)
+				strip.setPixelColorRGB(LED_COUNT-j-1,0, 255, 0)
+
+		if rpm > 3
+			for j in a range (4,6)
+					strip.setPixelColorRGB(j, 0, 255, 0)
+					strip.setPixelColorRGB(LED_COUNT-j-1,0, 255, 0)
+        if rpm > 4
+			for j in a range (6,8)
+		    		strip.setPixelColorRGB(j, 0, 255, 0)
+			    	strip.setPixelColorRGB(LED_COUNT-j-1,0, 255, 0)
+
+		strip.show()
+        time.sleep(0.2)
+
+
+if __name__ == '__main__':
+	main()
