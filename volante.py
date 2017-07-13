@@ -16,49 +16,49 @@ def update_rpm(x):
     # Intialize the library (must be called once before other functions).
     strip.begin()
 
-    if x > 1312:
+    if x > 1500:
         for j in range(1):
             strip.setPixelColorRGB(j,0,255,0)
             strip.setPixelColorRGB(LED_COUNT-j-1,0,255,0)
-    if x > 2700:
+    if x > 3000:
         for j in range(1,2):
             strip.setPixelColorRGB(j,0,255,0)
             strip.setPixelColorRGB(LED_COUNT-j-1,0,255,0)
-    if x > 4000:
+    if x > 4500:
         for j in range(2,3):
             strip.setPixelColorRGB(j,255,0,0)
             strip.setPixelColorRGB(LED_COUNT-j-1,255,0,0)
-    if x > 5000:
+    if x > 6000:
         for j in range(3,4):
             strip.setPixelColorRGB(j,255,0,0)
             strip.setPixelColorRGB(LED_COUNT-j-1,255,0,0)
-    if x > 6000:
+    if x > 7500:
         for j in range(4,5):
             strip.setPixelColorRGB(j,0,0,255)
             strip.setPixelColorRGB(LED_COUNT-j-1,0,0,255)
-    if x > 7500:
+    if x > 9000:
         for j in range(5,6):
             strip.setPixelColorRGB(j,0,0,255)
             strip.setPixelColorRGB(LED_COUNT-j-1,0,0,255)
-    if x > 9000:
+    if x > 10500:
         for j in range(6,7):
             strip.setPixelColorRGB(j,0,0,255)
             strip.setPixelColorRGB(LED_COUNT-j-1,0,0,255)
-    if x > 10500:
+    if x > 12000:
         for j in range(7,9):
             strip.setPixelColorRGB(j,0,0,255)
             strip.setPixelColorRGB(LED_COUNT-j-1,0,0,255)
     """
-    if x > 50:
+    if x > 12500:
         for j in range (0,LED_COUNT):
             strip.setPixelColorRGB(j,255,255,255)
-            strip.setPixelColorRGB(LED_COUNT-j-1,255,255,255)
             time.sleep(0.2)
+        for j in range (0,LED_COUNT):
             strip.setPixelColorRGB(j,0,0,0)
-            strip.setPixelColorRGB(LED_COUNT-j-1,0,0,0)
             time.sleep(0.2)
+        for j in range (0,LED_COUNT):
             strip.setPixelColorRGB(j,255,255,255)
-            strip.setPixelColorRGB(LED_COUNT-j-1,255,255,255)
+            
     """
     strip.show()
 
